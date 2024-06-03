@@ -96,16 +96,12 @@ function getTotalResults(data) {
 function observationSummary(data) {
   // TODO
 
-  // Iterar sobre cada objeto na matriz results
   for (let i = 0; i < data.results.length; i++) {
     const observation = data.results[i];
-    // Extrair as propriedades necessárias
     const id = observation.id;
     const speciesGuess = observation.species_guess;
     const observedOnDate = observation.observed_on_details.date;
-    // Formatar a string conforme especificado
     const formattedString = `#${id} - ${speciesGuess} [${observedOnDate}]`;
-    // Chamar console.log com a string formatada
     console.log(formattedString);
   }
 }
